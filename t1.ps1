@@ -23,10 +23,6 @@
 # I could not have done any of this without inspiration from these three Titans and the entire f0 community. Thanks to all of you for inspiring me to undertake this project.
 
 
-# Turn of capslock if it is left on
-
-$caps = [System.Windows.Forms.Control]::IsKeyLocked('CapsLock')
-if ($caps -eq $true){$key = New-Object -ComObject WScript.Shell;$key.SendKeys('{CapsLock}')};
 
 #Adjust what $d= to change delay and change what $n= to adjust how many times to repeat the script. Currently set 5 seconds & no repeats
 $n=1;$d=5;1..$n|%{Start-Sleep -s $d; Start microsoft-edge:'http://geektyper.com/plain'; $wshell = New-Object -ComObject wscript.shell; Sleep 2; $wshell.SendKeys('{f11}'); 
