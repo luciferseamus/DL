@@ -27,7 +27,7 @@ I-Am-Jakoby Git BadUsb resources
 
 
  Converted to .js and then to .ps1 by Luciferseamus - reason- I wanted to be able to run this but have the option to delay the effect.  I couldn't figure out how to do it via .txt file so I 
- converted it to .js format.  It seemed easier after messing with PS commands for almost an entire weekend. I did learn alot however!  
+ converted it to .js (still working on that 08/19/2024, for now it is .txt) format.  It seemed easier after messing with PS commands for almost an entire weekend. I did learn alot however!  
  I could not have done any of this without inspiration from these three Titans and the entire f0 community. Thanks to all of you for inspiring me to undertake this project.
 
 
