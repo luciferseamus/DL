@@ -1,3 +1,4 @@
+REM  (08/19/2024)
 REM  Hacker-typer By UberGuidoZ Git BadUSB resources -> https://github.com/UberGuidoZ/Flipper/tree/main/BadUSB
 REM  Opens a harmless website and types like a hacker
 
