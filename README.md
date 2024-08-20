@@ -30,6 +30,7 @@ I-Am-Jakoby Git BadUsb resources
  converted it to .js (still working on that 08/19/2024, for now it is .txt) format.  It seemed easier after messing with PS commands for almost an entire weekend. I did learn alot however!  
  I could not have done any of this without inspiration from these three Titans and the entire f0 community. Thanks to all of you for inspiring me to undertake this project.
 
+I made a video of the effect of the script is anyone is interested it can be found [here](https://youtu.be/ZKEVMxZ6PRA?si=SvtvQTQE1_P6tt8W]).
 
 There are multiple .ps1 scripts in the zip file. they all start with t the next character designates (h)ours, (m)minutes or (s)econds.  example 'ts30.ps1' I pre-made 5 second, 30 sec, 1 minute, 30 min, 1 hour //and 3 hrs. none of them are set to repeat but if anyone wants I can add that or you can edit the .ps1 file and adjust the repeat quantity.
 all of the files will delete themselves after running as well as the zip, clear run box history, clear powershell history and empty the recycle bin.
