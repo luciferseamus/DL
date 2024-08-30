@@ -24,7 +24,7 @@ REM     Target: Windows 10, 11
 REM I-Am-Jakoby Git BadUsb resources -> https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB
 
 
-REM  Converted to .js (still in the works) and then added the .ps1 element by Luciferseamus - reason- I wanted to be able to run this but have the option to delay the effect.  I couldn't figure out how to do it via .txt (ACTUALLY I DID!!) file so I 
+REM  Converted to .js (still in the works) and then added the .ps1 element by Luciferseamus - reason- I wanted to be able to run this but have the option to delay the effect.  I couldn't figure out how to do it via .txt (ACTUALLY I DID!!) file so I started working on a .js version.
 REM  It seemed easier after messing with PS commands for almost an entire month. I did learn alot however!  
 REM  I could not have done any of this without inspiration from these three Titans and the entire f0 community. Thanks to all of you for inspiring me to undertake this project.
 
