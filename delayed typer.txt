@@ -1,4 +1,4 @@
-REM  (08/19/2024)
+REM  08/19/2024
 REM  Hacker-typer By UberGuidoZ Git BadUSB resources -> https://github.com/UberGuidoZ/Flipper/tree/main/BadUSB
 REM  Opens a harmless website and types like a hacker
 
@@ -24,9 +24,10 @@ REM     Target: Windows 10, 11
 REM I-Am-Jakoby Git BadUsb resources -> https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB
 
 
-REM  Converted to .js (still in the works) and then added the .ps1 element by Luciferseamus - reason- I wanted to be able to run this but have the option to delay the effect.  I couldn't figure out how to do it via .txt (ACTUALLY I DID!!) file so I started working on a .js version.
+REM  Converted to .js (still in the works) and then added the .ps1 element by Luciferseamus - reason- I wanted to be able to run this but have the option to delay the effect.  I couldn't figure out how to do it via .txt (ACTUALLY I DID!!) file so I am working on a .js verion
 REM  It seemed easier after messing with PS commands for almost an entire month. I did learn alot however!  
 REM  I could not have done any of this without inspiration from these three Titans and the entire f0 community. Thanks to all of you for inspiring me to undertake this project.
+REM UPDATE (08/30/2024):NOW INCLUDING - Wait for mouse option!
 
 REM
 DELAY 1000
@@ -41,3 +42,5 @@ REM There are multiple .ps1 scripts in the zip file. they all start with t the n
 REM  second, 30 sec, 1 minute, 30 min, 1 hour and 3 hrs. none of them are set to repeat but if anyone wants I can add that or you can edit the .ps1 file and adjust the repeat quantity.
 REM all of the files will delete themselves after running as well as the zip, clear run box history and empty the recycle bin.
 REM Also included is t1.ps1 so you can verify things are being cleaned up without having to sit through the entire script 
+REM UPDATE (08/30/2024):NOW INCLUDING - Wait for mouse option! to use replace \'t*.ps1' with \'Wm.ps1' 
+REM Currently delay is set for 30sec. after mouse movement is detected.
