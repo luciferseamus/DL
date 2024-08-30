@@ -34,4 +34,6 @@ I-Am-Jakoby Git BadUsb resources
 
 There are multiple .ps1 scripts in the zip file. they all start with t the next character designates (h)ours, (m)minutes or (s)econds.  example 'ts30.ps1' I pre-made 5 second, 30 sec, 1 minute, 30 min, 1 hour //and 3 hrs. none of them are set to repeat but if anyone wants I can add that or you can edit the .ps1 file and adjust the repeat quantity.
 all of the files will delete themselves after running as well as the zip, clear run box history, clear powershell history and empty the recycle bin.
-Also included is t1.ps1 so you can verify things are being cleaned up without having to sit through the entire script 
+Also included is t1.ps1 so you can verify things are being cleaned up without having to sit through the entire script.
+UPDATE (08/30/2024):NOW INCLUDING - Wait for mouse option! to use replace \'t*.ps1' with \'Wm.ps1' 
+Currently delay is set for 30sec. after mouse movement is detected.
