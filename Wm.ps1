@@ -117,6 +117,9 @@ rm $D\t.zip* -r -Force -ErrorAction SilentlyContinue
 # empty temp folder
 rm $D\t* -r -Force -ErrorAction SilentlyContinue
 
+# empty temp folder
+rm $D\Wm.ps1 -r -Force -ErrorAction SilentlyContinue
+
 # delete run box history
 reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
 
