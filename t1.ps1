@@ -23,6 +23,9 @@
 # I could not have done any of this without inspiration from these three Titans and the entire f0 community. Thanks to all of you for inspiring me to undertake this project.
 
 
+#This is a clean up testing version just to verify everything is gone once it is through running without having to sit through the whole thing
+
+
 
 #Adjust what $d= to change delay and change what $n= to adjust how many times to repeat the script. Currently set 5 seconds & no repeats
 $n=1;$d=5;1..$n|%{Start-Sleep -s $d; Start microsoft-edge:'http://geektyper.com/plain'; $wshell = New-Object -ComObject wscript.shell; Sleep 2; $wshell.SendKeys('{f11}'); 
@@ -33,9 +36,12 @@ $n=1;$d=5;1..$n|%{Start-Sleep -s $d; Start microsoft-edge:'http://geektyper.com/
 #Cover your tracks!
 
 $D="$env:tmp"
-
+cd\
 # Delete the zip
 rm $D\t.zip* -r -Force -ErrorAction SilentlyContinue
+
+# Delete Wait for mouse .ps1
+rm $D\Wm.ps1 -r -Force -ErrorAction SilentlyContinue
 
 # empty temp folder
 rm $D\t* -r -Force -ErrorAction SilentlyContinue
