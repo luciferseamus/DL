@@ -21,7 +21,7 @@
 # Converted to .js and then to .ps1 by Luciferseamus - reason- I wanted to be able to run this but have the option to delay the effect.  I couldn't figure out how to do it via .txt file so I 
 # converted it to .js format.  It seemed easier after messing with PS commands for almost an entire weekend. I did learn alot however!  
 # I could not have done any of this without inspiration from these three Titans and the entire f0 community. Thanks to all of you for inspiring me to undertake this project.
-#UPDATE (08/30/2024):NOW INCLUDING - Wait for mouse option!
+#UPDATE (08/30/2024):NOW INCLUDING - Wait for mouse option! Currently set for 5 min after mouse moevment.
 
 
 #############################################################################################################################################
@@ -33,7 +33,7 @@ $originalPOS = [System.Windows.Forms.Cursor]::Position.X
 $o=New-Object -ComObject WScript.Shell
 
     while (1) {
-        $pauseTime = 300
+        $pauseTime = 4
         if ([Windows.Forms.Cursor]::Position.X -ne $originalPOS){
             break
         }
@@ -49,6 +49,12 @@ $o=New-Object -ComObject WScript.Shell
 #############################################################################################################################################
 
 Target-Comes
+
+
+# Turn of capslock if it is left on
+
+$caps = [System.Windows.Forms.Control]::IsKeyLocked('CapsLock')
+if ($caps -eq $true){$key = New-Object -ComObject WScript.Shell;$key.SendKeys('{CapsLock}')}
 
 
 Start microsoft-edge:'http://geektyper.com/plain'; $wshell = New-Object -ComObject wscript.shell; Sleep 2; $wshell.SendKeys('{f11}'); 
@@ -110,15 +116,15 @@ $wshell.SendKeys('{END}');  Sleep 5; $wshell.SendKeys('{0}'); Sleep 7; $wshell.S
 #Cover your tracks!
 
 $D="$env:tmp"
-
+cd\
 # Delete the zip
 rm $D\t.zip* -r -Force -ErrorAction SilentlyContinue
 
-# empty temp folder
-rm $D\t* -r -Force -ErrorAction SilentlyContinue
+# Delete Wait for mouse .ps1
+rm $D\Wm.ps1 -r -Force -ErrorAction SilentlyContinue
 
 # empty temp folder
-rm $D\Wm.ps1 -r -Force -ErrorAction SilentlyContinue
+rm $D\t* -r -Force -ErrorAction SilentlyContinue
 
 # delete run box history
 reg delete HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /va /f
